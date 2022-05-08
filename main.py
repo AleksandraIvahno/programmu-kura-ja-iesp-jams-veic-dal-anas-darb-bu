@@ -1,10 +1,15 @@
-def division(first, second):
-  if second == 0:
-    print("Nedalīt ar nulli!!")
-  else:
-    answer = first / second
-    print(first, "dalīt ar", second, "=", answer)
+def Atlaide(sum):
+  newSum = sum
+  if sum >= 200 and sum <= 499:
+    Atlaide = sum * 0.1
+    newSum = sum - Atlaide
+  elif sum >= 500:
+    Atlaide = sum * 0.2
+    newSum = sum - Atlaide
+  return newSum
 
-firstNum = int(input("Ievadiet pirmo numuru: "))
-secondNum = int(input("Ievadiet dalītāju: "))
-division(firstNum, secondNum)
+print("Ievadiet pirkuma summu:")
+
+summa = float(input("Summa: "))
+
+print("Jūsu pirkuma cena:", Atlaide(summa))
